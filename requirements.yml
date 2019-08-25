@@ -3,3 +3,7 @@
 - name: geerlingguy.homebrew
 - name: geerlingguy.mas
 - name: micalexander.dmux
+- name: micalexander.python2
+- name: micalexander.python3
+- name: micalexander.ruby
+- name: micalexander.node
