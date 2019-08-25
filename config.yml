@@ -3,12 +3,12 @@ downloads: ~/.ansible-downloads/
 
 configure_dotfiles: yes
 configure_sudoers: yes
-configure_terminal: yes
-configure_osx: no
+configure_osx: yes
 
-dotfiles_repo: https://github.com/micalexander/dotfiles.git
-dotfiles_repo_accept_hostkey: yes
-dotfiles_repo_local_destination: ~/Downloads/dotfiles
+# dotfiles_folder_path:
+# dotfiles_git_repo:
+# dotfiles_bashrc_path: "~/.bashrc"
+# dotfiles_cmd_alias_name: "dot"
 
 homebrew_installed_packages:
   - autoconf
@@ -83,101 +83,99 @@ homebrew_cask_apps:
   - font-clear-sans
   - font-arvo
   - font-titillium-web
- - font-open-sans
- - font-lato
- - font-fontawesome
- - geektool
- - google-chrome
- - google-drive-file-stream
- - hazel
- - hyperdock
- - imageoptim
- - iterm2
- - kaleidoscope
- - keepingyouawake
- - launchcontrol
- - launchrocket
- - licecap
- - linein
- - name-mangler
- - obs
- - provisionql
- - qlcolorcode
- - qlimagesize
- - qlmarkdown
- - qlprettypatch
- - qlstephen
- - qlvideo
- - querious
- - quicklookapk
- - quicklookase
- - quicklook-csv
- - quicklook-json
- - quicklook-pat
- - reaper
- - rowmote-helper
- - screenflow
- - silverlight
- - skype
- - sonoair
- - spotify
- - steam
- - suspicious-package
- - toggl
- - torbrowser
- - transmit
- - virtualbox
- - vlc
- - webpquicklook
- - wireshark
- - xscope
+  - font-open-sans
+  - font-lato
+  - font-fontawesome
+  - geektool
+  - google-chrome
+  - google-drive-file-stream
+  - hazel
+  - hyperdock
+  - imageoptim
+  - iterm2
+  - kaleidoscope
+  - keepingyouawake
+  - launchcontrol
+  - launchrocket
+  - licecap
+  - linein
+  - name-mangler
+  - obs
+  - provisionql
+  - qlcolorcode
+  - qlimagesize
+  - qlmarkdown
+  - qlprettypatch
+  - qlstephen
+  - qlvideo
+  - querious
+  - quicklookapk
+  - quicklookase
+  - quicklook-csv
+  - quicklook-json
+  - quicklook-pat
+  - reaper
+  - rowmote-helper
+  - screenflow
+  - silverlight
+  - skype
+  - sonoair
+  - spotify
+  - steam
+  - suspicious-package
+  - toggl
+  - torbrowser
+  - transmit
+  - virtualbox
+  - vlc
+  - webpquicklook
+  - wireshark
+  - xscope
 
- # See `geerlingguy.mas` role documentation for usage instructions.
- mas_installed_apps:
-   - { id: 824183456, name: "Affinity Photo" }
-   # - { id: 530458789, name: "Frank DeLoupe" }
-   - { id: 441258766, name: "Magnet" }
-   - { id: 409183694, name: "Keynote" }
-   - { id: 408981434, name: "iMovie" }
-   - { id: 824171161, name: "Affinity" }
-   - { id: 992076693, name: "MindNode" }
-   - { id: 429449079, name: "Patterns" }
-   - { id: 510109287, name: "Short Menu" }
-   - { id: 924891282, name: "Pixave" }
-   - { id: 866773894, name: "Quiver" }
-   - { id: 549083868, name: "Display Menu" }
-   - { id: 409201541, name: "Pages" }
-   - { id: 682658836, name: "GarageBand" }
-   - { id: 1176895641, name: "Spark" }
-   # - { id: 481981128, name: "Gradient" }
-   - { id: 409203825, name: "Numbers" }
-   - { id: 1153157709, name: "Speedtest" }
-   - { id: 990588172, name: "Gestimer" }
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps:
+  - { id: 824183456, name: "Affinity Photo" }
+  - { id: 441258766, name: "Magnet" }
+  - { id: 409183694, name: "Keynote" }
+  - { id: 408981434, name: "iMovie" }
+  - { id: 824171161, name: "Affinity" }
+  - { id: 992076693, name: "MindNode" }
+  - { id: 429449079, name: "Patterns" }
+  - { id: 510109287, name: "Short Menu" }
+  - { id: 924891282, name: "Pixave" }
+  - { id: 866773894, name: "Quiver" }
+  - { id: 549083868, name: "Display Menu" }
+  - { id: 409201541, name: "Pages" }
+  - { id: 682658836, name: "GarageBand" }
+  - { id: 1176895641, name: "Spark" }
+  - { id: 409203825, name: "Numbers" }
+  - { id: 1153157709, name: "Speedtest" }
+  - { id: 990588172, name: "Gestimer" }
 
- mas_email: ""
- mas_password: ""
+mas_email: ""
+mas_password: ""
 
- osx_script: "~/.osx --no-restart"
+osx_script: "~/.osx --no-restart"
 
- # Install packages from other package managers.
- # Note: You are responsible for making sure the required package managers are
- # installed, eg. through homebrew.
- composer_packages: []
-   # - name: drush
-   #   state: present # present/absent, default: present
-   #   version: "^8.1" # default: N/A
- gem_packages: []
-   # - name: bundler
-   #   state: present # present/absent/latest, default: present
-   #   version: "~> 1.15.1" # default: N/A
- npm_packages: []
-   # - name: webpack
-   #   state: present # present/absent/latest, default: present
-   #   version: "^2.6" # default: N/A
- pip_packages: []
-   # - name: mkdocs
-   #   state: present # present/absent/latest, default: present
-   #   version: "0.16.3" # default: N/A
+# Install packages from other package managers.
+# Note: You are responsible for making sure the required package managers are
+# installed, eg. through homebrew.
+composer_packages: []
+# - name: drush
+#   state: present # present/absent, default: present
+#   version: "^8.1" # default: N/A
+gem_packages: []
+# - name: bundler
+#   state: present # present/absent/latest, default: present
+#   version: "~> 1.15.1" # default: N/A
+npm_packages: []
+# - name: webpack
+#   state: present # present/absent/latest, default: present
+#   version: "^2.6" # default: N/A
+pip_packages: []
+# - name: mkdocs
+#   state: present # present/absent/latest, default: present
+#   version: "0.16.3" # default: N/A
 
- # Glob pattern to ansible task files to run after all other tasks are finished.
- post_provision_tasks: []
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []
