@@ -1,4 +1,5 @@
 ---
-- name: geerlingguy.dotfiles
+- name: dredizzle22.dotfiles
 - name: geerlingguy.homebrew
 - name: geerlingguy.mas
+- name: micalexander.dmux
