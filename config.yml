@@ -4,7 +4,8 @@ downloads: ~/.ansible-downloads/
 configure_dotfiles: yes
 configure_sudoers: yes
 configure_osx: yes
-configure_vi_mode: yes
+configure_bash: yes
+configure_dmux: yes
 
 # dotfiles_folder_path:
 # dotfiles_git_repo:
