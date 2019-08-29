@@ -16,37 +16,45 @@
       with_fileglob:
         - "{{ playbook_dir }}/config.yml"
       tags: ['always']
-
-  roles:
-    - role: geerlingguy.homebrew
-      tags: ['homebrew']
-    - role: dredizzle22.dotfiles
+  tasks:
+    - name: Install requirements
+      raw: ansible-galaxy install -r {{ playbook_dir }}/requirements.yml -f
+    - include_role: 
+        name: geerlingguy.homebrew
+        tags: ['homebrew']
+    - include_role: 
+        name: dredizzle22.dotfiles
       when: configure_dotfiles
       tags: ['dotfiles']
-    - role: geerlingguy.mas
+    - include_role: 
+        name: geerlingguy.mas
       when: mas_installed_apps
       tags: ['mas']
-    - role: micalexander.dmux
+    - include_role: 
+        name: micalexander.dmux
       when: configure_dmux
       tags: ['dmux']
-    - role: micalexander.python2
-      vars: 
-        ['pip2_install']
+    - include_role: 
+        name: micalexander.python2
+        vars: 
+          ['pip2_install']
       when: pip2_install
-    - role: micalexander.python3
-      vars: 
-        ['pip3_install']
+    - include_role: 
+        name: micalexander.python3
+        vars: 
+          ['pip3_install']
       when: pip3_install
-    - role: micalexander.ruby
-      vars: 
-        ['gem_install']
+    - include_role: 
+        name: micalexander.ruby
+        vars: 
+          ['gem_install']
       when: gem_install
-    - role: micalexander.node
-      vars: 
-        ['npm_install']
+    - include_role: 
+        name: micalexander.node
+        vars: 
+          ['npm_install']
       when: npm_install
 
-  tasks:
     - include_tasks: tasks/ansible-setup.yml
 
     - include_tasks: tasks/sudoers.yml
