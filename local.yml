@@ -30,20 +30,20 @@
       when: configure_dmux
       tags: ['dmux']
     - role: micalexander.python2
-        vars: 
-          ['pip2_install']
+      vars: 
+        ['pip2_install']
       when: pip2_install
     - role: micalexander.python3
-        vars: 
-          ['pip3_install']
+      vars: 
+        ['pip3_install']
       when: pip3_install
     - role: micalexander.ruby
-        vars: 
-          ['gem_install']
+      vars: 
+        ['gem_install']
       when: gem_install
     - role: micalexander.node
-        vars: 
-          ['npm_install']
+      vars: 
+        ['npm_install']
       when: npm_install
 
   tasks:
