@@ -8,6 +8,7 @@
         group: localhost  
         
 - name: Setup Macos
+  hosts: localhost
   vars_files:
     - default.config.yml
 
