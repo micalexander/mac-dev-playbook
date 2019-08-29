@@ -32,19 +32,15 @@
       when: configure_dmux
     - include_role: 
         name: micalexander.python2
-      vars: ['pip2_install']
       when: pip2_install
     - include_role: 
         name: micalexander.python3
-      vars: ['pip3_install']
       when: pip3_install
     - include_role: 
         name: micalexander.ruby
-      vars: ['gem_install']
       when: gem_install
     - include_role: 
         name: micalexander.node
-      vars: ['npm_install']
       when: npm_install
 
     - include_tasks: tasks/ansible-setup.yml
