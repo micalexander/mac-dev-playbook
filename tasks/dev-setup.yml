@@ -1,0 +1,17 @@
+---
+roles:
+  - role: geerlingguy.homebrew
+  - role: dredizzle22.dotfiles
+    when: configure_dotfiles
+  - role: geerlingguy.mas
+    when: mas_installed_apps
+  - role: micalexander.dmux
+    when: configure_dmux
+  - role: micalexander.python2
+    when: pip2_install
+  - role: micalexander.python3
+    when: pip3_install
+  - role: micalexander.ruby
+    when: gem_install 
+  - role: micalexander.node
+    when: npm_install
