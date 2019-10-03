@@ -2,7 +2,7 @@
 - name: Setup Macos
   hosts: localhost
   vars_files:
-    - default.config.yml
+    - "{{ playbook_dir }}default.config.yml"
 
   pre_tasks:
     - include_vars: "{{ item }}"
