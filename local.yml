@@ -20,30 +20,9 @@
   tasks:
     - name: Install requirements
       raw: ansible-galaxy install -r {{ playbook_dir }}/requirements.yml -f
-    - include_role: 
-        name: geerlingguy.homebrew
-    - include_role: 
-        name: dredizzle22.dotfiles
-      when: configure_dotfiles
-    - include_role: 
-        name: geerlingguy.mas
-      when: mas_installed_apps
-    - include_role: 
-        name: micalexander.dmux
-      when: configure_dmux
-    - include_role: 
-        name: micalexander.python2
-      when: pip2_install
-    - include_role: 
-        name: micalexander.python3
-      when: pip3_install
-    - include_role: 
-        name: micalexander.ruby
-      when: gem_install
-    - include_role: 
-        name: micalexander.node
-      when: npm_install
-
+    
+    - include_tasks: tasks/dev-setup.yml
+    
     - include_tasks: tasks/ansible-setup.yml
 
     - include_tasks: tasks/sudoers.yml
