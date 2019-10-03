@@ -2,7 +2,7 @@
 - name: Setup Macos
   hosts: localhost
   vars_files:
-    - "{{ playbook_dir }}default.config.yml"
+    - "{{ playbook_dir }}/default.config.yml"
 
   pre_tasks:
     - include_vars: "{{ item }}"
@@ -27,12 +27,12 @@
       when: npm_install
       
   tasks:
-    - include_tasks: tasks/ansible-setup.yml
+    - include_tasks: "{{ playbook_dir }}/tasks/ansible-setup.yml"
 
-    - include_tasks: tasks/sudoers.yml
+    - include_tasks: "{{ playbook_dir }}/tasks/sudoers.yml"
       when: configure_sudoers
 
-    - include_tasks: tasks/osx.yml
+    - include_tasks: "{{ playbook_dir }}/tasks/osx.yml"
       when: configure_osx
       tags: ['osx']
       
