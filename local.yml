@@ -22,4 +22,4 @@
       raw: ansible-galaxy install -r {{ playbook_dir }}/requirements.yml -f
     
 - name: Include dev setup
-  include: tasks/dev-setup.yml
+  include: dev-setup.yml
