@@ -21,7 +21,7 @@
     - name: Install requirements
       raw: ansible-galaxy install -r {{ playbook_dir }}/requirements.yml -f
     
-    - include_tasks: tasks/dev-setup.yml
+    - include_roles: tasks/dev-setup.yml
     
     - include_tasks: tasks/ansible-setup.yml
 
